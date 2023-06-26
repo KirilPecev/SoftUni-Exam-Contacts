@@ -13,7 +13,7 @@ services:
                     memory: 2GB
         environment:
             - ACCEPT_EULA=Y
-            - MSSQL_SA_PASSWORD=yourStrongPassword12#
+            - MSSQL_SA_PASSWORD=myStrongPassword12#
         volumes: 
             - sqldata:/var/opt/mssql
     web-app:
@@ -21,7 +21,7 @@ services:
         build:
             dockerfile: ./Dockerfile
         domainname: kpecev
-        image: kpecevcontactscr.azurecr.io/contacts-image    
+        image: kpecevcontactscr.azurecr.io/kpecev-contacts-image    
         ports: 
             - "80:80"
         restart: on-failure
